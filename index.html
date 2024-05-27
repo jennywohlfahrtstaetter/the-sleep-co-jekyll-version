@@ -1,47 +1,20 @@
-<!DOCTYPE html>
-<html>
-
-<!------ This is the HEAD (external resources, references and metadata)------->
-<head>
-    <title> Sleep like a baby</title>
-
-    <!-- viewport meta for responsive design -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!---- This is the gridlex stylesheet for flexbox grids ------------------------->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.7.1/gridlex.min.css">
+---
+layout: default
+featured:
+ - icon: fa-solid fa-cloud icon
+   description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quibusdam molestiae animi aliquam, corporis libero, nam officiis hic nesciunt explicabo harum. Cupiditate unde at in exercitationem.
+ - icon: fa-brands fa-pagelines icon
+   description: Delectus quibusdam molestiae animi aliquam, corporis libero, nam officiis hic nesciunt explicabo harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+ - icon: fa-regular fa-heart icon
+   description: Wabasum belectus quibusdam molestiae animi aliquam, corporis libero, nam officiis hic nesciunt explicabo harum. Cupiditate unde at in exercitationem aperiam labore voluptatem libero maja ankun.
+ - icon: fa-solid fa-feather-pointed icon
+   description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quibusdam molestiae animi aliquam, corporis libero, nam officiis hic nesciunt explicabo harum.
+---
     
-    <!---- This is the font-awesome icons --------------->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-    <!----- This is the google fonts stylesheet Catamaran (we use 200,400,500,800) ---------------->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap" rel="stylesheet">
-   
-    <!---- This is the CSS stylesheet. It always goes last! ---->
-    <link rel="stylesheet" href="style.css">
+    <!------------------ Header Banner ------------------>
+    <header class="grid padded text-center tall-90 md-tall-60"> <!-- diese Zeile stehen lassen damit unterschiedliche Größen bei den verschiedenen Headern auf allen Seiten erhalten bleibt -->
 
-</head>
-
-<!------ THis is the BODY (all content) -------------------------------------->
-<body>
-    
-<!------------------ Header Banner ------------------>
-    <header class="grid padded text-center tall-90 md-tall-60">
-        <div class="col-12-top grid header-nav">
-            <div class="col-5_sm-12">
-                <a href="/index.html">
-                  <h1 class="logo">The Sleep Co</h1>
-                </a>
-            </div>
-            <nav class="col-7_sm-12 text-right sm-text-center">
-                <a href="/index.html" class="noborder"> Home</a>
-                <a href="/about.html" class="noborder"> About</a>
-                <a href="/products.html" class="noborder"> Products</a>
-                <a href="/contact.html" class="noborder"> Contact</a>
-            </nav>
-        </div>
+        {% include header-nav.html %}
 
         <div class="col-12">
             <h3 class="font-weight-bold"> <span class="featured-text"> sleep</span> like a baby </h3>
@@ -71,26 +44,18 @@
 </section>
 
 <!---------------- Feature Icon Grid ---------------------->
-<section class="padded grid bg-dark">
+<section class="padded grid-center bg-dark"> <!-- center if client wants to add more or less so it still looks nice -->
     <div class="padded-sm col-12 text-center"> 
         <h2> <span class="featured-text">features</span> you will love </h2>
     </div>
+
+    {% for item in page.featured %}
     <div class="padded-sm col-3_sm-6_xs-12 sm-text-center"> 
-        <i class="fa-solid fa-cloud icon"></i>
-        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quibusdam molestiae animi aliquam, corporis libero, nam officiis hic nesciunt explicabo harum. Cupiditate unde at in exercitationem aperiam labore voluptatem libero.</p>
+        <i class="{{item.icon}}"></i> <!-- copy all the class elements to the top and replace here with liquid tag; oben können dann alle icons durch nur den mittleren part und dem adden der Class "icon" (die ich vorher bereits erstellt hatte) ersetzt werden -->
+        <p> {{item.description}}</p>
     </div>
-    <div class="padded-sm col-3_sm-6_xs-12 sm-text-center"> 
-        <i class="fa-solid fa-cloud icon"></i>
-        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quibusdam sapiente hic itaque laudantium harum mollitia, illo quam earum magni necessitatibus, fuga consectetur cum modi numquam quos in, voluptates saepe.</p>
-    </div>
-    <div class="padded-sm col-3_sm-6_xs-12 sm-text-center"> 
-        <i class="fa-solid fa-cloud icon"></i>
-        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda amet a beatae enim, esse sed doloribus voluptatum? Nobis provident similique consectetur repudiandae rem dolore quod accusamus, dolor exercitationem? Nesciunt, quisquam?</p>
-    </div>
-    <div class="padded-sm col-3_sm-6_xs-12 sm-text-center "> 
-        <i class="fa-solid fa-cloud icon"></i>
-        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora modi, molestiae consequuntur distinctio odio ab incidunt obcaecati officia mollitia! Quidem, culpa illo? Quo commodi sed perspiciatis dolore nobis, excepturi animi!</p>
-    </div>
+    {% endfor %}
+
 </section>
 
  <!---------------- Image Banner  --------------------------->
@@ -117,26 +82,3 @@
         <span class="quote-icon">”</span>
     </div>
 </section>
-
-<!------------------------ footer -------------------------->
-<footer class="padded grid-spaceBetween bg-dark"> 
-    <div class="col-4-bottom_sm-12 sm-margin-b-2 sm-text-center"> 
-        <h2> Let's 
-            <br> <span class="featured-text">connect</span> </h2>
-        <p> Lorem dorisauner ipsum dolor sit amet consectetur hapabli adipisicing elit. Amet matami rabahan impedit modi id ab sint dicta laudantium. Amet hic vel perspiciatis delectus doloremque, autem aperiam ullam obcaecati eum earum maxime adipisci. </p>
-    </div>
-    <div class="col-5-bottom_sm-12 sm-text-center"> 
-        <p> <strong> Call:</strong> <a href="tel:#"> 04555 5555</a> </p>
-        <p> <strong> Email:</strong> <a href="mailto:#"> hello@thesleepco.com</a> </p>
-        <p> <strong> Store:</strong> 55 Main St, Chicago </p>
-        <p> <strong> Instagram:</strong> <a href="https.instagram.com/thesleepco">@thesleepco</a> </p>
-    </div>
-</footer>
-
-<!-- Start of HubSpot Embed Code -->
-<script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/144741772.js"></script>
-<!-- End of HubSpot Embed Code -->
-
-
-</body>
-</html>

@@ -1,47 +1,11 @@
-<!DOCTYPE html>
-<html>
-
-<!------ This is the HEAD (external resources, references and metadata)------->
-<head>
-    <title> Contact</title>
-
-    <!-- viewport meta for responsive design -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!---- This is the gridlex stylesheet for flexbox grids ------------------------->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.7.1/gridlex.min.css">
-    
-    <!---- This is the font-awesome icons --------------->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-    <!----- This is the google fonts stylesheet Catamaran (we use 200,400,500,800) ---------------->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap" rel="stylesheet">
-   
-    <!---- This is the CSS stylesheet. It always goes last! ---->
-    <link rel="stylesheet" href="style.css">
-
-</head>
-
-<!------ THis is the BODY (all content) -------------------------------------->
-<body>
+---
+layout: default
+---
     
     <!------------------ Header Banner ------------------>
-        <header class="padded grid text-center tall-80">
-            <div class="col-12 grid header-nav">
-                <div class="col-5">
-                    <a href="/index.html">
-                      <h1>The Sleep Co</h1>
-                    </a>
-                </div>
-                <nav class="col-7 text-right">
-                    <a href="/index.html" class="noborder"> Home</a>
-                    <a href="/about.html" class="noborder"> About</a>
-                    <a href="/products.html" class="noborder"> Products</a>
-                    <a href="/contact.html" class="noborder"> Contact</a>
-                </nav>
-            </div>
+        <header class="padded grid text-center tall-80 md-tall-60">
+            
+            {% include header-nav.html %}
     
             <div class="col-12">
                 <h3 class="font-weight-bold"> <span class="featured-text"> contact</span> us today </h3>
@@ -115,21 +79,3 @@
         <span class="quote-icon">”</span>
     </div>
 </section>
-
-    <!------------------------ footer -------------------------->
-<footer class="padded grid-spaceBetween bg-dark"> 
-    <div class="col-4-bottom"> 
-        <h2> Let's 
-            <br> <span class="featured-text">connect</span> </h2>
-        <p> Lorem dorisauner ipsum dolor sit amet consectetur hapabli adipisicing elit. Amet matami rabahan impedit modi id ab sint dicta laudantium. Amet hic vel perspiciatis delectus doloremque, autem aperiam ullam obcaecati eum earum maxime adipisci. </p>
-    </div>
-    <div class="col-5-bottom"> 
-        <p> <strong> Call:</strong> <a href="tel:#"> 04555 5555</a> </p>
-        <p> <strong> Email:</strong> <a href="mailto:#"> hello@thesleepco.com</a> </p>
-        <p> <strong> Store:</strong> 55 Main St, Chicago </p>
-        <p> <strong> Instagram:</strong> <a href="https.instagram.com/thesleepco">@thesleepco</a> </p>
-    </div>
-</footer>
-
-</body>
-</html>
