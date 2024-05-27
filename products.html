@@ -1,5 +1,15 @@
 ---
 layout: default
+cards:
+ - heading: this is a heading
+   description: this is the description of the product you will absolutely love
+   featured_image: /images/the-sleep-co-1.jpg
+ - heading: this is a heading
+   description: this is the description of the product you will absolutely love
+   featured_image: /images/the-sleep-co-3.jpg
+ - heading: this is a heading
+   description: this is the description of the product you will absolutely love
+   featured_image: /images/the-sleep-co-4.jpg
 ---
     
 <!------------------ Header Banner ------------------>
@@ -38,33 +48,19 @@ layout: default
 
 <!------------------------ cards -------------------------->
 <section class="grid padded">
+
+    {% for item in page.cards %}
+    
     <div class="col-4_sm12 padded-sm">
         <div class="card">
-            <div class="bg-image bg-sheets portrait"> </div>
+            <div class="bg-image portrait" style="background-image: url('{{item.featured_image}}')"> </div> <!-- genau so schreiben wie im CSS, am ende kein strichpunkt notwendig, weil nur eine variable dieses Mal vorkommt; dann content nehmen und oben in die front matter kopieren; hier ein liquid tag einfügen; underscore verwenden weil cloudcannon dies erkennt und auf images verweist -> gute user experience -->
             <div class="padded-1"> </div>
-                <h3>this is a heading</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis pariatur ipsam ipsum, vero quibusdam magni error suscipit! Nihil ea, consequuntur quam ullam non totam eligendi saepe, laboriosam corrupti, iure cupiditate.</p>
+                <h3>{{item.heading}}</h3>
+                <p>{{item.description}}</p>
         </div>
     </div>
 
-    <div class="col-4_sm12 padded-sm">
-        <div class="card">
-            <div class="bg-image bg-bed portrait"> </div>
-            <div class="padded-1"> </div>
-                <h3>this is a heading</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis pariatur ipsam ipsum, vero quibusdam magni error suscipit! Nihil ea, consequuntur quam ullam non totam eligendi saepe, laboriosam corrupti, iure cupiditate.</p>
-        </div>
-    </div>
-
-    <div class="col-4_sm12 padded-sm">
-        <div class="card">
-            <div class="bg-image bg-dog portrait"> </div>
-            <div class="padded-1"> </div>
-                <h3>this is a heading</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis pariatur ipsam ipsum, vero quibusdam magni error suscipit! Nihil ea, consequuntur quam ullam non totam eligendi saepe, laboriosam corrupti, iure cupiditate.</p>
-        </div>
-    </div>
-
+    {% endfor %}
 
 </section>
 
