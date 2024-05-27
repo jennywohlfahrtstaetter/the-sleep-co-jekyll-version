@@ -255,6 +255,36 @@ a {
 a:hover {
     color: #FFBE00;
 }
+
+/* ------ mobile menu -----------------*/ 
+.hamburger-button {
+    position: relative;
+    z-index: 2;
+    font-size: 2.2rem;
+    cursor: pointer;
+    margin-top: 0.4rem;
+}
+
+.hamburger-button.active {
+    color: #FFBE00;
+}
+
+.mob-menu {
+    position: fixed;
+    text-align: center;
+    top: 14vh;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.mob-menu a {
+    display: block;
+    font-size: 1.6rem;
+    padding: 0.5rem;
+    margin-left: 0;
+}
+
 /* ------ background images ---------- */
 .bg-bed {background-image: url('/images/the-sleep-co-3.jpg'); }
 .bg-dog {
@@ -310,7 +340,8 @@ textarea:focus {
 
 .show-xs, 
 .show-sm,
-.show-md {
+.show-md,
+.mob-menu {
 	display: none;
 }
 
@@ -352,7 +383,7 @@ textarea:focus {
   .sm-margin-l-0 { margin-left: 0; }
   .sm-margin-r-0 { margin-right: 0; }
 
-  .logo { font-size: 2rem;}
+  .logo { font-size: 5vh;}
   header h3 {font-size: 11vw;}
 
   
