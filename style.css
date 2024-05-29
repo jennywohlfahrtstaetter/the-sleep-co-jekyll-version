@@ -327,11 +327,19 @@ textarea:focus {
 
 .button {
     padding: 0.5rem 2rem;
-    background-color: #FFBE00;
+    background-color: #192B37;
     appearance: none; 
     /* set appearance to none (targets 3d style of the button, makes appearance more consistent across browsers */
     border: 2px solid #FFBE00;
-    color: inherit;
+    border-radius: 5px;
+    color: #FFBE00;
+    cursor: pointer;
+}
+
+.button:hover {
+    color: #192B37;
+    background-color: #FFBE00;
+    border: 2px solid #FFBE00;
 }
 
 /* -----  Gallery --------- */ 
@@ -339,6 +347,17 @@ textarea:focus {
   padding: 1% 1%; 
 }
   
+.gallery .gallery-item {
+    border-bottom: none;
+}
+
+
+/* background of gallery when active (from JS) */
+.lg-backdrop { background-color: #192B37;}
+.lg-backdrop.in { opacity: 0.9;}
+
+/* subtitle of gallery2 when active (also color and background interchangeable */
+.lg-sub-html { padding-bottom: 3%;}
 
 /* ONLY INDEX SITE MADE RESPONSIVE SO FAR !!!!!!!!!!!!!!! */
 

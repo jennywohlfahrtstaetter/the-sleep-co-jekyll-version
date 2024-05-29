@@ -35,9 +35,41 @@ gallery:
 </header>
 
 <!------------------  Gallery ----------------------->
+  <!-- popup gallery -->
 <section>
-    <h2 class="text-center padded"> These are the softest mattresses for a perfect night's sleep </h2>
+    <h2 class="text-center margin-t"> This is a popup gallery </h2>
+    <div class="gallery grid padded" id="lightgallery">
+        
+      {% for item in page.gallery %}
+      <a class="{{item.column-size}} gallery-item" href="{{item.background_image}}">
+          <div class="bg-image {{item.aspect-ratio}}"
+               style="background-image: url('{{item.background_image}}');"> 
+          </div>
+      </a>
 
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- popup gallery button  -->
+  <section class="bg-dark padded">
+    <h2 class="text-center margin-t"> This is a button that triggers a popup gallery </h2>
+      <div class="gallery text-center padded" id="lightgallery-2">
+        <!-- links that trigger the pop-up gallery -->
+        <a class="button" href="/images/the-sleep-co-1.jpg" title="Caption 1">VIEW OUR WORK</a>
+        <a href="/images/the-sleep-co-2.jpg" title="Caption 2"></a>
+        <a href="/images/the-sleep-co-1.jpg" title="Caption 3"></a>
+        <a href="/images/the-sleep-co-3.jpg" title="Caption 4"></a>
+        <a href="/images/the-sleep-co-4.jpg" title="Caption 5"></a>
+        <a href="/images/the-sleep-co-1.jpg" title="Caption 6"></a>
+        <a href="/images/the-sleep-co-2.jpg" title="Caption 7"></a>
+        <a href="/images/the-sleep-co-3.jpg" title="Caption 8"></a>
+      </div>
+  </section>
+
+  <!-- standard gallery -->
+  <section class="padded">
+    <h2 class="text-center"> This is a standard gallery </h2>
     <div class="gallery grid padded">
         
         {% for item in page.gallery %}
