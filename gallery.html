@@ -1,7 +1,7 @@
 ---
 layout: default
 popup-gallery: true
-background-mode: Featured Mode
+background-mode: Light Mode
 gallery:
   - column-size: col-6
     aspect-ratio: portrait
@@ -37,9 +37,9 @@ gallery:
 
 <!------------------  Gallery ----------------------->
   <!-- popup gallery -->
-<section class="{% if page.background-mode == 'Dark Mode' %} bg-dark {% elsif page.background-mode == 'Featured Mode' %} bg-featured {% endif %}">
-  <!-- doesn't need a light mode because default is light and Dark mode is specified -->
-  {% if page.popup-gallery == true %}
+<section class="{% if page.background-mode == 'Dark Mode' %} bg-dark {% elsif page.background-mode == 'Featured Mode' %} bg-featured {% elsif page.background-mode == 'Light Mode' %} bg-light {% endif %}">
+
+  <!-- {% if page.popup-gallery == true %} -->
 
     <h2 class="text-center padded-t"> This is a popup gallery </h2>
     <div class="gallery grid padded" id="lightgallery">
@@ -53,7 +53,7 @@ gallery:
       {% endfor %}
     </div>
 
-    {% else %}
+    <!-- {% else %} -->
     <!-- standard gallery -->
     <section class="padded">
     <h2 class="text-center"> This is the standard gallery </h2>
@@ -67,7 +67,7 @@ gallery:
         {% endfor %}
     </div>
 
-  {% endif %}
+  <!-- {% endif %} -->
 
   </section>
 
