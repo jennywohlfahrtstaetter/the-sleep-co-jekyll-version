@@ -1,31 +1,26 @@
 ---
 layout: default
 popup-gallery: true
+background-mode: Featured Mode
 gallery:
-   -
-      column-size: col-6
-      aspect-ratio: landscape-wide
-      background_image: /images/the-sleep-co-3.jpg
-   -
-      column-size: col-6
-      aspect-ratio: portrait
-      background_image: /images/the-sleep-co-1.jpg
-   -
-      column-size: col-12
-      aspect-ratio: landscape-wide
-      background_image: /images/the-sleep-co-2.jpg
-   -
-      column-size: col-4
-      aspect-ratio: portrait
-      background_image: /images/the-sleep-co-4.jpg
-   -
-      column-size: col-4
-      aspect-ratio: portrait
-      background_image: /images/the-sleep-co-3.jpg
-   -
-      column-size: col-4
-      aspect-ratio: portrait
-      background_image: /images/the-sleep-co-1.jpg
+   - column-size: col-6
+     aspect-ratio: portrait
+     background_image: /images/the-sleep-co-3.jpg
+   - column-size: col-6
+     aspect-ratio: portrait
+     background_image: /images/the-sleep-co-1.jpg
+   - column-size: col-12
+     aspect-ratio: landscape-wide
+     background_image: /images/the-sleep-co-2.jpg
+   - column-size: col-4
+     aspect-ratio: portrait
+     background_image: /images/the-sleep-co-4.jpg
+   - column-size: col-4
+     aspect-ratio: portrait
+     background_image: /images/the-sleep-co-3.jpg
+   - column-size: col-4
+     aspect-ratio: portrait
+     background_image: /images/the-sleep-co-1.jpg
 ---
 <!------------------ Header Banner ------------------>
 <header class="grid padded text-center tall-80 md-tall-60">
@@ -42,10 +37,11 @@ gallery:
 
 <!------------------  Gallery ----------------------->
   <!-- popup gallery -->
-<section>
+<section class="{% if page.background-mode == 'Dark Mode' %} bg-dark {% elsif page.background-mode == 'Featured Mode' %} bg-featured {% endif %}">
+  <!-- doesn't need a light mode because default is light and Dark mode is specified -->
   {% if page.popup-gallery == true %}
 
-    <h2 class="text-center margin-t"> This is a popup gallery </h2>
+    <h2 class="text-center padded-t"> This is a popup gallery </h2>
     <div class="gallery grid padded" id="lightgallery">
         
       {% for item in page.gallery %}
