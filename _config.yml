@@ -17,6 +17,5 @@ _select_data:
     col-3_sm-12: One Quarter (Stacked)
 
   background-modes:
-    bg-featured: Featured Mode
-    bg-dark: Dark Mode
-    bg-light: Light Mode
+    - Featured Mode
+    - Dark Mode
