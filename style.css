@@ -336,10 +336,27 @@ textarea:focus {
     cursor: pointer;
 }
 
+.featured-button {
+    padding: 0.5rem 2rem;
+    background-color: lightblue;
+    appearance: none; 
+    /* set appearance to none (targets 3d style of the button, makes appearance more consistent across browsers */
+    border: 2px solid lightblue;
+    border-radius: 5px;
+    color: #192B37;
+    cursor: pointer;
+}
+
 .button:hover {
     color: #192B37;
     background-color: #FFBE00;
     border: 2px solid #FFBE00;
+}
+
+.featured-button:hover {
+    color: lightblue;
+    background-color: #192B37;
+    border: 2px solid lightblue;
 }
 
 /* -----  Gallery --------- */ 
