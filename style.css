@@ -13,16 +13,23 @@ navy: #192B37 */
     padding: 0;
 }
 
+/* changed colors to CSS variables / no spaces between dashes and text ! */
+:root {
+    --dark: #192B37;
+    --featured: lightblue;
+    --yellow: #FFBE00;
+}
+
 
 /* --------------- universal styles and utility classes -------------- */
 body {
     font-family: 'Catamaran', sans-serif;
-    color: #192B37;
+    color: var(--dark);
 }
 
 
 .bg-dark { 
-    background-color: #192B37;
+    background-color: var(--dark);
     color: white;
 }
 
@@ -111,12 +118,8 @@ p:last-child {
 }
 
 /* background and image styles */
-.bg-dark { 
-    background-color: #5c8da3); 
-    color: white;
-  }
   
-  .bg-featured { background-color: lightblue; }
+  .bg-featured { background-color: var(--featured); }
   .bg-light { background-color: rgb(245,245,245); }
   
   .bg-image {
@@ -192,7 +195,7 @@ nav a {
 .tall-100    {min-height: 100vh;}
 
 /* text styles */
-.featured-text {color: #FFBE00;}
+.featured-text {color: var(--yellow);}
 .white-text {color: white;}
 
 .subtitle {
@@ -254,7 +257,7 @@ a {
 }
 
 a:hover {
-    color: #FFBE00;
+    color: var(--yellow);
 }
 
 /* ------ mobile menu -----------------*/ 
@@ -267,7 +270,7 @@ a:hover {
 }
 
 .hamburger-button.active {
-    color: #FFBE00;
+    color: var(--yellow);
 }
 
 .mob-menu {
@@ -322,7 +325,7 @@ textarea {
 
 input:focus,
 textarea:focus {
-    border: 2px solid #FFBE00;
+    border: 2px solid var(--yellow);
 }
 
 .button {
@@ -330,33 +333,33 @@ textarea:focus {
     background-color: #192B37;
     appearance: none; 
     /* set appearance to none (targets 3d style of the button, makes appearance more consistent across browsers */
-    border: 2px solid #FFBE00;
+    border: 2px solid var(--yellow);
     border-radius: 5px;
-    color: #FFBE00;
+    color: var(--yellow);
     cursor: pointer;
 }
 
 .featured-button {
     padding: 0.5rem 2rem;
-    background-color: lightblue;
+    background-color: var(--featured);
     appearance: none; 
     /* set appearance to none (targets 3d style of the button, makes appearance more consistent across browsers */
-    border: 2px solid lightblue;
+    border: 2px solid var(--featured);
     border-radius: 5px;
-    color: #192B37;
+    color: var(--dark);
     cursor: pointer;
 }
 
 .button:hover {
-    color: #192B37;
-    background-color: #FFBE00;
-    border: 2px solid #FFBE00;
+    color: var(--dark);
+    background-color: var(--yellow);
+    border: 2px solid var(--yellow);
 }
 
 .featured-button:hover {
-    color: lightblue;
-    background-color: #192B37;
-    border: 2px solid lightblue;
+    color: var(--featured);
+    background-color: var(--dark);
+    border: 2px solid var(--featured);
 }
 
 /* -----  Gallery --------- */ 
@@ -370,7 +373,7 @@ textarea:focus {
 
 
 /* background of gallery when active (from JS) */
-.lg-backdrop { background-color: #192B37;}
+.lg-backdrop { background-color: var(--dark);}
 .lg-backdrop.in { opacity: 0.9;}
 
 /* subtitle of gallery2 when active (also color and background interchangeable */
