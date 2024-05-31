@@ -14,11 +14,11 @@ navy: #192B37 */
 }
 
 /* changed colors to CSS variables / no spaces between dashes and text ! */
-:root {
+/* :root {
     --dark: #192B37;
     --featured: lightblue;
     --yellow: #FFBE00;
-}
+} */
 
 
 /* --------------- universal styles and utility classes -------------- */
