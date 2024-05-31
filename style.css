@@ -452,7 +452,7 @@ textarea:focus {
     line-height: 1.1;}
 }
 
-Optional media query below 400px in case you want to make something different from XS size: 
+/* Optional media query below 400px in case you want to make something different from XS size:  */
 
 /* ------- Optional XXS Media Query (25em / 400px) NOT part of default Gridlex styling--------------- */ 
 /* - Styles added here will apply at devices smaller than 400px, or zoomed in equivalent */ 
