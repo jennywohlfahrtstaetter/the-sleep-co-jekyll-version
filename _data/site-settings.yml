@@ -1,7 +1,7 @@
 # seo und socials etc wird später geadded
 
 design:
-  dark: '#192B37'
-  featured: 'lightblue'
-  yellow: '#FFBE00'
+  dark_color: '#192B37'
+  featured_color: 'lightblue'
+  yellow_color: '#FFBE00'
 
