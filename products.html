@@ -30,30 +30,30 @@ cards:
     <div class="padded-sm col-12 text-center"> 
         <h2> <span class="featured-text">features</span> you will love </h2>
     </div>
-    <div class="padded-sm col-3"> 
+    <div class="padded-sm col-3_sm-12 sm-text-center"> 
         <h3>little heading</h3>
         <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quibusdam molestiae animi aliquam, corporis libero, nam officiis hic nesciunt explicabo harum. Cupiditate unde at in exercitationem aperiam labore voluptatem libero.</p>
     </div>
-    <div class="padded-sm col-3"> 
+    <div class="padded-sm col-3_sm-12 sm-text-center"> 
         <h3>little heading</h3>
         <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quibusdam sapiente hic itaque laudantium harum mollitia, illo quam earum magni necessitatibus, fuga consectetur cum modi numquam quos in, voluptates saepe.</p>
     </div>
-    <div class="padded-sm col-3"> 
+    <div class="padded-sm col-3_sm-12 sm-text-center"> 
         <h3>little heading</h3>
         <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda amet a beatae enim, esse sed doloribus voluptatum? Nobis provident similique consectetur repudiandae rem dolore quod accusamus, dolor exercitationem? Nesciunt, quisquam?</p>
     </div>
-    <div class="padded-sm col-3"> 
+    <div class="padded-sm col-3_sm-12 sm-text-center"> 
         <h3>little heading</h3>
         <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora modi, molestiae consequuntur distinctio odio ab incidunt obcaecati officia mollitia! Quidem, culpa illo? Quo commodi sed perspiciatis dolore nobis, excepturi animi!</p>
     </div>
 </section>
 
 <!------------------------ cards -------------------------->
-<section class="grid padded">
+<section class="grid-center padded">
 
     {% for item in page.cards %}
     
-    <div class="col-4_sm12 padded-sm">
+    <div class="col-4_sm-6 padded-sm">
         <div class="card">
             <div class="bg-image portrait" style="background-image: url('{{item.featured_image}}')"> </div> <!-- genau so schreiben wie im CSS, am ende kein strichpunkt notwendig, weil nur eine variable dieses Mal vorkommt; dann content nehmen und oben in die front matter kopieren; hier ein liquid tag einfügen; underscore verwenden weil cloudcannon dies erkennt und auf images verweist -> gute user experience -->
             <div class="padded-1"> </div>
@@ -78,31 +78,31 @@ cards:
 
 <!---------------- Gallery Section ---------------------->
 <section class="grid">
-    <div class="padded col-6-middle"> 
+    <div class="padded col-6-middle_sm-12"> 
         <div>
         <h2> built to last a <span class="featured-text">lifetime</span> </h2>
         <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero voluptatem cum facere fugiat architecto perferendis ut mollitia, ipsam assumenda quidem dignissimos incidunt nobis quae tempore?</p>
         <p> Est esse ipsam quas distinctio, exercitationem aliquid sint incidunt deserunt error qui quia earum. Alias aperiam, possimus dicta consequatur optio vel sequi!</p>
     </div>
     </div>
-    <div class="bg-image bg-bed col-6 tall-70"> 
+    <div class="bg-image bg-bed col-6_sm-12 tall-70 hide-sm"> 
         <!-- background image bed -->
     </div>
-    <div class="bg-image bg-dog col-6 tall-70"> 
+    <div class="bg-image bg-dog col-6_sm-12 tall-70 hide-sm"> 
         <!-- background image mops sleeping -->
     </div>
-    <div class="padded -col-6-middle"> 
+    <div class="padded col-6-middle_sm-12"> 
         <h2> so <span class="featured-text">soft</span> you'll melt</h2>
         <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga libero dignissimos in, dolore ipsam quia maxime tenetur, neque laudantium eius maiores distinctio perspiciatis illum. Quis saepe quibusdam possimus accusamus asperiores. </p>
     </div>
-    <div class="padded col-6-middle"> 
+    <div class="padded col-6-middle_sm-12"> 
         <div>
         <h2> built to last a <span class="featured-text">lifetime</span> </h2>
         <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero voluptatem cum facere fugiat architecto perferendis ut mollitia, ipsam assumenda quidem dignissimos incidunt nobis quae tempore?</p>
         <p> Est esse ipsam quas distinctio, exercitationem aliquid sint incidunt deserunt error qui quia earum. Alias aperiam, possimus dicta consequatur optio vel sequi!</p>
     </div>
     </div>
-    <div class="bg-image bg-bed col-6 tall-70"> 
+    <div class="bg-image bg-bed col-6_sm-12 tall-70 hide-sm"> 
         <!-- background image bed -->
     </div>
 </section>

@@ -379,7 +379,6 @@ textarea:focus {
 /* subtitle of gallery2 when active (also color and background interchangeable */
 .lg-sub-html { padding-bottom: 3%;}
 
-/* ONLY INDEX SITE MADE RESPONSIVE SO FAR !!!!!!!!!!!!!!! */
 
 
 /* General CSS Responsive Styles (Apply everywhere unless overridden) */ 
@@ -432,7 +431,10 @@ textarea:focus {
   .logo { font-size: 5vh;}
   header h3 {font-size: 11vw;}
 
-  
+  /*flip*/
+    .sm-flex-flip {
+    flex-direction: column-reverse;
+  }
 
 }
 
