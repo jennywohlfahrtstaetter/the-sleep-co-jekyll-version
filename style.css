@@ -325,7 +325,7 @@ textarea {
 
 input:focus,
 textarea:focus {
-    border: 2px solid var(--yellow);
+    border: 2px solid var(--featured);
 }
 
 .button {
@@ -333,9 +333,9 @@ textarea:focus {
     background-color: #192B37;
     appearance: none; 
     /* set appearance to none (targets 3d style of the button, makes appearance more consistent across browsers */
-    border: 2px solid var(--yellow);
+    border: 2px solid var(--dark);
     border-radius: 5px;
-    color: var(--yellow);
+    color: var(--featured);
     cursor: pointer;
 }
 
